@@ -1,0 +1,41 @@
+<html>  
+<head>  
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mystyle.css') }}">
+    <title>login</title>  
+</head> 
+<style>
+     h2{margin: 20px;text-align: center;}
+     p{margin: 20px; text-align: right;}
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+tr:hover {background-color: #D6EEEE;}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+    </style> 
+<body>  
+  <div>
+    <h2 style="color:black;">Login Successful </h2>
+    <p style="color:blue;"><a href = "{{ url_for('logout') }}">Logout</a>  </p>
+  </div>
+    <table  class="center">   
+        
+        <tr><td>Username:</td>              <td>{{session['acc']}}</td></tr>
+        <tr><td>Inbox Count:  </td>              <td>{{session['frombox']}}</td></tr>
+        <tr><td>Destination Folder Count:</td>   <td>{{session['tobox']}}</td></tr>
+        <tr><td>Mails Processed: </td>         <td>{{session['counter']}}</td></tr>
+        <tr><td>Mails Moved:    </td>          <td>{{session['mailsmoved']}}</td></tr>
+   <table>
+   
+   
+    </form>  
+</body>  
+</html>  

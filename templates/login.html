@@ -1,20 +1,43 @@
-<!Doctype html>
-<html>
-    <head></head>
-        <title></title>
-   
-    <body>
-       
-        <h1></h1>
-        <h2>Enter username and password to move emails</h2>
-         <form action="/" method="POST">
-       
-       Username <input type = "text" name="username">
-       Password <input type = "text" name="password">
-        <input type="submit">
+<html>  
+<head>  
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mystyle.css') }}">
+  <!--  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">-->
+    <title>login</title> 
+    
+    <style>
+        tr{margin: 20px, 20px, 20px,20px;text-align: left;}
+        p{margin: 20px; text-align: right;}
       
+       th, td {
         
-</form></body>
-   
-       
-</html>
+     padding-bottom: 5px;
+
+     padding-left: 5px;
+     padding-right: 5px;
+   }
+   tr:hover {background-color: #D6EEEE;}
+   table.center {
+    margin-top:80px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+       </style> 
+</head>  
+<body>  
+    {% if error %}  
+        <p><strong>Error</strong>: {{error}}</p>  
+    {% endif %}  
+
+    
+  
+    <form method = "post" action = "/login">  
+        <table  class="center">  
+           
+            <tr><td><b>Username</b></td><td><input type = 'text' name = 'username' required></td></tr>  
+            <tr><td><b>Password</b></td><td><input type = 'password' name = 'pass' required></td></tr>  
+            <tr><td><b><input type = "submit" value = "Submit"></b></td></tr>  
+        </table>  
+    </form>  
+</body>  
+</html>  
