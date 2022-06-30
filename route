@@ -1,0 +1,2 @@
+return 'Account: %s   Inbox Count: %d Destination folder count: %d Mails Processed: %d Mails Moved: %d ' %(acc, frombox, tobox, counter,mailsmoved) 
+     
